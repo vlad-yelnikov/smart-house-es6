@@ -6,17 +6,17 @@ class Lamp extends Device {
         this._color = color;
         this._power = power;
     }
-    get Color() {
+    get color() {
         return this._color;
     }
-    set Color(color) {
+    set color(color) {
         this._color = color;
     }
-    get Power() {
-        return this._power.getPower();
+    get power() {
+        return this._power.power;
     }
-    set Power(value) {
-        return this._power.setPower(value);
+    set power(value) {
+        return this._power.power(value);
     }
     increasePower(value) {
         return this._power.increasePower(value);

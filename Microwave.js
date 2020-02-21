@@ -7,13 +7,13 @@ class Microwave extends Device {
         this._time = 0;
         this._mode = '';
     }
-    get Time() {
+    get time() {
         return this._time;
     }
-    set Time(time) {
+    set time(time) {
         this._time = time;
     }
-    get Mode() {
+    get mode() {
         return this._mode;
     }
     heat() {
@@ -25,11 +25,11 @@ class Microwave extends Device {
     grill() {
         this._mode = 'grill';
     }
-    get Power() {
-        return this._power.getPower();
+    get power() {
+        return this._power.power;
     }
-    set Power(value) {
-        return this._power.setPower(value);
+    set power(value) {
+        return this._power.power(value);
     }
     increasePower(value) {
         return this._power.increasePower(value);
