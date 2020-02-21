@@ -15,9 +15,8 @@ class House {
         this._devices.push(device);
     }
     getDevice(name) {
-        function condition(value) {
-            return value.name == name;
-        }
+        const condition = value => value.name == name;
+
         return this.getAllDevices().find(condition);
     }
     delDevice(name) {
