@@ -15,10 +15,10 @@ class House {
         this._devices.push(device);
     }
     getDevice(name) {
-        function check(value) {
-            return value.getName() == name;
+        function condition(value) {
+            return value.name == name;
         }
-        return this.getAllDevices().find(check);
+        return this.getAllDevices().find(condition);
     }
     delDevice(name) {
         const device = this.getDevice(name);
