@@ -15,9 +15,7 @@ class House {
         this._devices.push(device);
     }
     getDevice(name) {
-        const condition = value => value.name == name;
-
-        return this.getAllDevices().find(condition);
+        return this._devices.find(device => device.name == name);
     }
     delDevice(name) {
         const device = this.getDevice(name);
@@ -26,5 +24,19 @@ class House {
     }
     getAllDevices() {
         return this._devices;
+    }
+    delayedOn(name, delay, callback) {
+        const device = this.getDevice(name);
+        setTimeout(() => {
+            device.on();
+            callback();
+        }, delay);
+    }
+    delayedOff(name, delay, callback) {
+        const device = this.getDevice(name);
+        setTimeout(() => {
+            device.off();
+            callback();
+        }, delay);
     }
 }

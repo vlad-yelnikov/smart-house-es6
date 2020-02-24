@@ -2,7 +2,7 @@
 
 class PowerRegulator {
     constructor(power) {
-        if (power >= 0 && power <= 100) this._power = power;
+        this._power = power;
     }
     get power() {
         return this._power;
